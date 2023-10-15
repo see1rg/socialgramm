@@ -1,8 +1,8 @@
 package com.see1rg.socialgramm.entity;
 
-import jakarta.persistence.*;
 import lombok.Data;
 
+import javax.persistence.*;
 import java.time.LocalDateTime;
 @Data
 @Entity

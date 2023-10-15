@@ -1,7 +1,7 @@
 package com.see1rg.socialgramm.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -26,7 +26,7 @@ public class User implements UserDetails {
     private String email;
     @Column(columnDefinition = "text")
     private String bio;
-    @Column(length = 60)
+    @Column(length = 300)
     private String password;
 
     @ElementCollection(targetClass = EnumRole.class)
