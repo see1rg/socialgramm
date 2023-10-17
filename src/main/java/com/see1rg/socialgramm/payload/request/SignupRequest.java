@@ -22,9 +22,9 @@ public class SignupRequest {
     @ValidEmail
     private String email;
     @NotEmpty(message = "First name is required")
-    private String firstName;
+    private String firstname;
     @NotEmpty(message = "Last name is required")
-    private String lastName;
+    private String lastname;
     @NotEmpty(message = "Confirm password is required")
     private String confirmPassword;
 }

@@ -20,9 +20,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-
-@RestController
 @CrossOrigin
+@RestController
 @RequestMapping("/api/auth")
 @PreAuthorize("permitAll()")
 public class AuthController {
@@ -60,6 +59,7 @@ public class AuthController {
         ResponseEntity<Object> errors = responseErrorValidation.appValidationService(bindingResult);
 
         if (!ObjectUtils.isEmpty(errors)) return errors;
+
         userService.createUser(signupRequest);
 
         return ResponseEntity.ok(new MessageResponse("User registered successfully"));
